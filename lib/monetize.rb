@@ -62,7 +62,7 @@ module Monetize
 
   def self.from_numeric(value, currency = Money.default_currency)
     case value
-    when Fixnum
+    when Integer
       from_fixnum(value, currency)
     when Numeric
       value = BigDecimal.new(value.to_s)
